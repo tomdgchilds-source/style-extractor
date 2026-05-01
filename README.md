@@ -51,6 +51,28 @@ tests/          Vitest unit tests
 public/presets/ Bootstrap presets shipped with the tool (mchphotocz.xmp)
 ```
 
+## Deploy
+
+Two paths to a live URL:
+
+**Easiest — Cloudflare Pages dashboard (one click, no CLI):**
+1. Go to https://dash.cloudflare.com → Workers & Pages → Create application → Pages → Connect to Git.
+2. Pick `tomdgchilds-source/style-extractor`.
+3. Build command: `npm run build` · Output directory: `dist/client`.
+4. Save and Deploy. Get a `*.pages.dev` URL. Future pushes auto-deploy.
+
+**Automated — GitHub Actions:**
+1. Create a Cloudflare API token at https://dash.cloudflare.com/profile/api-tokens with the "Edit Cloudflare Workers" template.
+2. Add to this repo: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` (Settings → Secrets and variables → Actions).
+3. Push to `main`. The `Deploy` workflow tests, builds, and deploys.
+
+**Local dev:**
+```bash
+npm install
+npm run dev:client      # Vite dev server (fast iteration)
+npm run dev             # Wrangler dev (full Worker + Assets stack)
+```
+
 ## Status
 
 In active development. See `~/.claude/plans/make-a-tool-which-steady-narwhal.md` for the build plan.
