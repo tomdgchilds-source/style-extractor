@@ -1,0 +1,34 @@
+{
+  "name": "style-extractor",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Mobile-first browser tool that extracts a photographer's style from reference images and outputs a Lightroom Mobile preset (.xmp) and 3D LUT (.cube).",
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:client": "vite",
+    "build": "vite build",
+    "deploy": "vite build && wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "hono": "^4.6.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.19",
+    "vitest": "^2.1.8",
+    "wrangler": "^3.99.0"
+  }
+}
