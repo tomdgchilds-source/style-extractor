@@ -5,3 +5,4 @@ export { Progress } from "./Progress";
 export { PrimaryButton } from "./PrimaryButton";
 export { PresetCard } from "./PresetCard";
 export { BeforeAfter } from "./BeforeAfter";
+export { ResultTile } from "./ResultTile";
